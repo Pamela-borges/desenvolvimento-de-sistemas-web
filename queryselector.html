@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width = device-width, initial-scale=1.0">
+        <title>
+            Exemplo com querySelector
+        </title> 
+        <style>
+            .destacado{
+                color:brown;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Exemplo com querySelector
+        </h1>
+
+        <p>Comum</p>
+        <p class="destacado">Este parágrafo será alterado</p>
+        <p>Comum</p>
+
+        <button name="changeText">
+            Alterar
+        </button>
+
+        <script>
+            document.getElementsByName("changeText")[0].addEventListener("click",
+            function(){
+                let paragrafoDestacado = document.querySelector('.destacado');
+                paragrafoDestacado.textContent = "o texto foi alterado pelo querySelector";
+
+            });
+        </script>
+    </body>
+</html>
