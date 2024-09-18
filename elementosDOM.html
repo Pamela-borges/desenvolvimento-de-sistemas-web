@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width = device-width, initial-scale=1.0">
+        <title>
+           Exercício DOM
+        </title> 
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: beige;
+                margin: 0;
+                padding: 20px;
+            }
+
+            #container{
+                background-color: aqua;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            button{
+                padding: 10px 20px;
+                margin-top: 10px;
+                background-color: rgb(0, 68, 255);
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            button:hover{
+                background-color: rgb(76, 65, 225);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>
+                Manipulação de elementos DOM
+            </h1>
+            <p id="paragrafo">
+                click para alterar texto
+            </p>
+            <button id="btn">
+                click aqui
+            </button>
+
+            <h2>
+                eventos DOM
+            </h2>
+
+            <label for="inputText">
+                DIGITE ALGO:
+            </label>
+
+            <input type="text" id="inputText">
+            <p id="outputText"></p>
+
+            <h2>
+                Criação de novos elementos
+            </h2>
+
+            <button id="addButton">
+                Adicionar novo parágrafo
+            </button>
+
+            <div id="newElements"></div>
+        </div>
+
+        <script>
+            //manipulando texto do parágrafo ao clicar no botão
+
+            document.getElementById("btn").addEventListener("click",
+                function(){
+                    document.getElementById("paragrafo").textContent="o texto foi alterado";
+                });
+
+            //mostrando o valor digitado no input
+            document.getElementById("inputText").addEventListener("input",
+                function(){
+                    document.getElementById("outputText").textContent="você digitou: " + this.value;                
+                });
+
+            //adicionando novos elementos ao DOM
+            document.getElementById("addButton").addEventListener("click",
+                function(){
+                    let novoParagrafo = document.createElement("p");
+                novoParagrafo.textContent="novo paragrafo adicionado";
+            document.getElementById("newElements").appendChild(novoParagrafo);    
+            
+                 });
+
+
+        </script>
+    </body>
+</html>
