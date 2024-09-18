@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width = device-width, initial-scale=1.0">
+        <title>
+            exemplo com getElementsByTagName('p')[1]
+        </title> 
+        <style>
+            body{
+                font-family: arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Exemplo com getElementsByTagName
+        </h1>
+
+        <p> parágrafo 1</p>
+        <p>Esse parágrafo será modificado</p>
+        <p> parágrafo 3 </p>  
+
+        <button id="changeText"> alterar o segundo parágrafo</button>
+
+        <script> document.getElementById("changeText").addEventListener("click", 
+        function(){
+            let segundoParagrafo = document.getElementsByTagName('p')[1];
+            segundoParagrafo.textContent = "o texto do segundo parágrafo foi alterado";
+        });
+
+        </script>
+    </body>
+</html>
