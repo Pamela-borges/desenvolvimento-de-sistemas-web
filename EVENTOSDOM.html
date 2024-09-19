@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width = device-width, initial-scale=1.0">
+        <title>
+          eventos de mouse
+        </title> 
+
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif; 
+                background-color: bisque;
+                margin: 0;
+                padding: 20px;
+            }
+
+            #box{
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                margin-bottom: 20px;
+            }
+
+            #output{
+                font-size: 18px;
+                color: black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>
+            eventos DOM no mouse
+        </h1>
+
+        <div id="box"> </div>
+
+        <p id="output">
+            Passe o mouse sobre o quadrado
+        </p>
+
+        <input type="text" id="input1" placeholder="pressione uma tecla">
+
+        <p id="key"> </p>
+
+        <button id="doisclick">
+            click duas vezes nesse botão
+        </button>
+
+        <p id="msg"> </p>
+
+        <script>
+            //evento mouse over
+            document.getElementById("box").addEventListener("mouseover",
+                function(){
+                    document.getElementById("output").textContent = "mouse sobre  quadrado";
+                    this.style.backgroundColor = "#4caf50"
+                });
+
+            //evento mouse out
+            document.getElementById("box").addEventListener("mouseout",
+                function(){
+                    document.getElementById("output").textContent="passe o mouse sobre o quadrado";
+                    this.style.backgroundColor = "#007vff";
+                });
+
+            //evento keydown
+            document.getElementById("input1").addEventListener("keydown",
+                function(){
+                    document.getElementById("key").textContent = "tecla pressionada";
+                });
+
+            //evento double click    
+            document.getElementById("doisclick").addEventListener("dblclick",
+                function(){
+                    document.getElementById("msg").textContent = "você clicou duas vezes";
+                });
+
+        </script>
+    </body>
+</html>
