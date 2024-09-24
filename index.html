@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html>
-    <head> 
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport"  content="width =device-width, initial-scale=1.0">
         
         <title>
-            Página criativa
+           estrutura de controle em javascript
         </title>
 
         <link rel="stylesheet" href="style.css">
@@ -13,21 +14,81 @@
 
     <body>
         <div class="container">
-            <h1 id="title">
-                explore sua criatividade
-                
-            </h1>
 
-            <p>
-                experimente mudar as cores e criar seu próprio estilo
-            </p>
+            <header>
+                <h1>
+                    Estruturas de repetição
+                </h1>
 
-            <button id="mudarCor">
-                mudar cor do texto
-            </button>
-        </div>
+                <p>
+                    Principais estruturas de repetição, com exemplos práticos
+                </p>
+            </header>
 
-        <script src="script.js"> </script>
+            <main>
+                <section>
+                    <h2> O que são estruturas de repetição? </h2>
+
+                    <p>
+                        São estruturas que permitem que nosso código repita comandos quando necessário.
+                    </p>
+                </section>
+
+                <section class="repeticao">
+
+                    <div class="example" id="for">
+
+                        <h3> Exemplo: for loop (para) </h3>
+                        <p> Quando souber o número de vezes que será repetido o comando, use o for. </p>
+
+                        <button onclick="usarFor()"> Rodar for </button>
+
+                        <div id="forResult" class="result"> </div>
+                    </div>
+
+                    <div class="example" id="while">
+
+                        <h3> Exemplo: while loop (enquanto) </h3>
+                        <p> Enquanto uma condiçao for verdadeira use o while </p>
+
+                        <button onclick="usarWhile()"> Rodar while </button>
+
+                        <div id="whileResult" class="result"> </div>
+                    </div>
+
+                    <div class="example" id="doWhile">
+
+                        <h3> Exemplo: Do...while (faça...enquanto) </h3>
+                        <p> Para garantir que o loop execute pelo menos uma vez, use o do...while </p>
+
+                        <button onclick="usarDoWhile()"> Rodar dowhile </button>
+
+                        <div id="doWhileResult" class="result"></div>
+                    </div>
+                </section>
+                <h1>
+                    Estruturas de condição
+                </h1>
+                <section class="condicao">
+                    <h2>O que são estruturas de condição?</h2>
+                    <p>Estruturas de condição permitem que o código decida o que fazer, dependendo das condições selecionadas.</p>
+                    <div class="example" id="ifElse">
+                        <h3>Exemplo: if...else (se...senão)</h3>
+                        <p>o if...else verifica uma condição e executa diferentes códigos para cada uma</p>
+                        <button onclick="usarIfElse()">Rodar if...else</button>
+                        <div class="result" id="ifElseResult"></div>
+                    </div>
+
+                    <div class="example" id="switch">
+                        <h3>Exemplo: switch (trocar)</h3>
+                        <p>o switch compara um valor com diferentes casos, e executa o caso correspondente</p>
+                        <button onclick="usarSwitch()">Rodar switch</button>
+                        <div class="result" id="switchResult"></div>
+                    </div>
+                </section>
+            </main>
+       </div>
+
+        <script src="script.js"></script>
     </body>
-
 </html>
